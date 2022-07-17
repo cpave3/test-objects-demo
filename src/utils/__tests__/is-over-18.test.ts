@@ -37,13 +37,13 @@ describe('isOver18', () => {
     describe('object mother', () => {
         // Pre-canned, ready to go user objects
         it('works with under aged', () => {
-            const user = userMother.underAgedUser();
+            const user = userMother.underAgedUser().build();
             const result = isOver18(user);
             expect(result).toBe(false);
         });
 
         it('works with over aged', () => {
-            const user = userMother.overAgedUser();
+            const user = userMother.overAgedUser().build();
             const result = isOver18(user);
             expect(result).toBe(true);
         });
